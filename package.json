@@ -1,0 +1,24 @@
+{
+  "name": "reminder-bot",
+  "version": "1.0.0",
+  "description": "Telegram reminder bot — /remind 30m task, /list, /done, /cancel. Node.js + TypeScript + Prisma SQLite.",
+  "main": "dist/bot.js",
+  "scripts": {
+    "start": "tsx src/bot.ts",
+    "db:push": "prisma db push"
+  },
+  "type": "commonjs",
+  "dependencies": {
+    "@prisma/client": "^6.19.3",
+    "dotenv": "^16.4.5",
+    "node-telegram-bot-api": "^0.66.0",
+    "pm2": "^7.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@types/node-telegram-bot-api": "^0.64.15",
+    "prisma": "^6.19.3",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.0"
+  }
+}

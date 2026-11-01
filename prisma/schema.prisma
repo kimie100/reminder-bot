@@ -1,0 +1,17 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = "file:./reminders.db"
+}
+
+model Reminder {
+  id        Int      @id @default(autoincrement())
+  chatId    String
+  text      String
+  dueAt     DateTime
+  status    String   @default("PENDING") // PENDING | DONE | CANCELLED
+  createdAt DateTime @default(now())
+}
